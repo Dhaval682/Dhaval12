@@ -5,25 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website_responsive</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        .link1>a{
+            color: white;
+        }
+        .content1{
+            padding-top: 21%;
+        }
+        .paragraph>p{
+            font-size: 18px;
+        font-style: italic;
+        color: rgb(114, 114, 114);
+        }
+        .circle>img{
+            border-radius: 50%;
+            
+        }
+        .paragraph>h2,p{
+        text-align: center;
+        line-height: 45px;
+}
+    .heading1>h2{
+        color: rgb(114, 114, 114);
+        font-size: 45px;
+    }
+    .bot-nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 48, 48);
+    padding: 5px;
+    }
+    .bot-nav>a{
+    color: white;
+     text-decoration-line: none;
+    padding: 10px;
+    }
+
+ .bot-nav>img{
+     height: 30px;
+     margin-top: 7px;
+    }
+
+
+ .bot-icon{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 48, 48);
+    }
+
+ .bot-icon>em{
+     margin: 10px 15px;
+    }
+    .footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+ }
+    </style>
 </head>
 <body>
     <div class="container-fluid m-0 p-0 vh-100 ">
         <div class="container-fluid d-flex flex-column w-100 h-100 m-0" style="background-image: url('Top-Bg.jpg');background-size: cover; background-repeat: no-repeat;">
-            <div class="d-flex flex-row justify-content-between w-75 mx-auto" >
+            <div class="d-flex flex-row justify-content-between w-75 mx-auto pt-4" >
                    <div> 
                        <img src="logo-top.png" alt="logo-top">
                     </div>
-                    <div>
-                        <a class="btn" href="#">HOME</a>
+                    <div class="link1">
+                        <a class="btn"   href="#"><u>HOME</u></a>
                         <a class="btn" href="#">ABOUT US</a>
                         <a class="btn" href="#">SOCIAL</a>
                         <a class="btn" href="#">CONTACT</a>
                     </div>
             </div>
-            <div >
-                <h2 class="text-center" style="color: white;"> Premium Quality & Tradition</h2>
-                <h4 class="text-center" style="color: white;">SINCE 1978</h4>
+            <div class="content1">
+                <h2 class="text-center display-2" style="color: white;"> Premium Quality & Tradition</h2>
+                <h4 class="text-center display-6 pt-1" style="color: white;"><em>SINCE 1978</em> </h4>
+            </div>
+            
+        </div>
+        <div>
+            <div class="text-center pt-3 heading1"><h2>Meet Our Team</h2></div>
+            <div class="d-flex flex-row justify-content-center" style="column-gap: 30px;">
+                <div class="d-flex flex-column">
+                    <div class="circle">
+                        <img height="322px" width="284px" src="profile-1.jpg" alt="profile-1">
+                    </div>
+                    <div class="paragraph">
+                        <h2>Dennis Kim</h2>
+                        <p>In the tumultuous business of</p>   
+                      <p> cutting-in and attending to a whale,</p>
+                       <p>there is much running backwards</p>
+                       <p> and forwards among the crew</p>  
+                    </div>
+                </div>
+                <div class="d-flex flex-column" >
+                    <div class="circle">
+                        <img  height="322px" width="284px" src="profile-2.jpg" alt="profile-2">
+                    </div>
+                    <div class="paragraph">
+                        <h2>Sara MacCoy</h2>
+                        <p>In the tumultuous business of</p>   
+                        <p> cutting-in and attending to a whale,</p>
+                         <p>there is much running backwards</p>
+                         <p> and forwards among the crew</p>  
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="circle">
+                        <img  height="322px" width="284px" src="profile-3.jpg" alt="profile-3">
+                    </div>
+                    <div class="paragraph">
+                        <h2>Emily Porter</h2>
+                        <p>In the tumultuous business of</p>   
+                        <p> cutting-in and attending to a whale,</p>
+                         <p>there is much running backwards</p>
+                         <p> and forwards among the crew</p> 
+                    </div>
+                </div>
+                </div>
+            </div>
+<!-- ___________________________________________
+__________________________________________ -->
+
+            <div class="d-flex flex-column justify-content-center" style="background-color: rgb(252, 3, 127);">
+                 <div class="text-center" style="color: white;">
+                    <h2>Contact Us</h2>
+                 </div>
+                 <div>
+                    <div class="d-flex flex-row  form-row p-3">
+                        <div class="form-group col-md-3">
+                            
+                          </div>
+                        <div class="form-group col-md-3">
+                          <input type="email" class="form-control p-3" id="inputEmail4" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-3" style="margin-left: 5px;">
+                          <input type="password" class="form-control p-3" id="inputPassword4" placeholder="Last Name">
+                        </div>
+                        <div class="form-group col-md-3">
+                             
+                          </div>
+                      </div>
+                      <div class="d-flex flex-row  form-row p-3">
+                            <div class="form-group col-md-3">
+                                
+                            </div>
+                            <div class="form-group col-md-3">
+                            <input type="email" class="form-control p-3" id="inputEmail4" placeholder="Contact@gmail.com">
+                            </div>
+                            <div class="form-group col-md-3" style="margin-left: 5px;">
+                            <input type="password" class="form-control p-3" id="inputPassword4" placeholder="Mobile Number">
+                            </div>
+                            <div class="form-group col-md-3">
+                                
+                            </div>
+                      </div>
+                      <div class="d-flex flex-row  form-row p-3">
+                            <div class="form-group col-md-3">
+                                    
+                            </div>
+                            <div class="form-group col-md-6">
+                                <textarea name="txt" id="txtname"   rows="3" class="form-control p-3"></textarea>
+                            </div>
+                            <div class="form-group col-md-3">
+                                
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row  form-row p-3">
+                            <div class="form-group col-md-3">
+                                    
+                            </div>
+                            <div class="form-group col-md-6">
+                                <button  class="form-control p-3 btn btn-dark" type="submit">SEND</button>
+                            </div>
+                            <div class="form-group col-md-3">
+                                
+                            </div>
+                        </div>
+                 </div>
+            </div>
+
+
+            <div>
+                <div class="bot-nav">  
+                    <a href="#"> HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <img src="logo-footer.png" alt="logo-top">
+                    <a href="#">SOCIAL</a>
+                    <a href="#">CONTACT</a>
+                 
+                </div>
+                <div class="bot-icon">
+                    <em class="fa-brands fa-square-facebook fa-2x"></em>
+                    <em class="fa-brands fa-square-twitter fa-2x"></em>
+                    <em class="fa-brands fa-square-instagram fa-2x"></em>
+                    <em class="fa-brands fa-square-picsart fa-2x"></em>
+                    
+                </div>
+            </div>
+            <div class="footer">
+                <p><strong>Copyright 2017</strong></p>
             </div>
         </div>
     </div>
