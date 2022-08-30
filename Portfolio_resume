@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <input type="checkbox" id="check_id">
+            <label for="check_id" class="menu_icon"><span class="fa fa-bars"></span></label>
+            <div class="nav">
+                <div class="img1"><img src="img_avatar.jpg" alt="Profile" height="150px" width="150px"></div>
+                <a href="#sandip">Profile Summary</a>
+                <a href="#">Education</a>
+                <a href="#">Experience</a>
+                <a href="#">Skills</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="profile1">
+                <strong>P R O F I L E &nbsp; S U M M A R Y</strong>
+                <p>
+                    A motivated individual with in-depth knowledge of languages and development tools, seeking
+                    a position in a growth-oriented company where I can use my skills to the advantage of the
+                    company while having the scope to develop my own skills.
+                </p>
+            </div>
+            <div class="profile3">
+                <p> <strong>E D U C A T I O N </strong></p>
+                <div class="span">
+                    <strong> Bachelor Of Engineering | Information Technology <span style="float: right;">2018 - 2022</span></strong>
+                </div>
+                <div class="pContent">
+                    <p>Government Engineering College, Bhavnagar</p>
+                    <p>CGPA - 7.6/10</p>
+                </div>
+            </div>
+            <div class="profile2">
+                <strong>W O R K &nbsp; E X P E R I E N C  E</strong>
+                <div class="span">
+                    <p> <strong>Software Developer (Intern)
+                        Casepoint LLC, Surat
+                        <span style="float: right;">Jan, 2022 - April, 2022</span></strong>
+                    </p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            Utilized my coding knowledge to develop modern softwares.
+                        </li>
+                        <li>
+                            Project : BookMySeat (Seat Allocation System)
+                        </li>
+                        <li>
+                            Improved my teamwork and logic building skills.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="profile4">
+                <div class="skiil1">
+                   <strong>T E C H N I C A L&nbsp; S K I L L S</strong> 
+                    <p>1.C,C#,jQuery</p>
+                    <p>2.HTML,CSS,JavaScript</p>
+                    <p>3.PostgreSQ,ASP.NET MVC</p>
+                </div>
+
+                <div class="skill2">
+                   <strong>I N T E R E S T S / H O B B I E S</strong> 
+                    <p>1.Learning</p>
+                    <p>2.Playing Chess</p>
+                    <p>3.Teaching</p>
+                </div>
+
+                <div class="skill3">
+                   <strong>S O F T&nbsp; S K I L L S</strong> 
+                    <p>1.Teamwork</p>
+                    <p>2.Mentoring</p>
+                    <p>3.Leadership</p>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
