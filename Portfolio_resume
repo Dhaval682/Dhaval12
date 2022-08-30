@@ -7,18 +7,18 @@
     <title>Responsive Resume</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-</head>
+</head> 
 <body>
     <div class="container">
         <div class="header">
-            <input type="checkbox" id="check_id">
-            <label for="check_id" class="menu_icon"><span class="fa fa-bars"></span></label>
+            <!-- <input type="checkbox" id="check_id">
+            <label for="check_id" class="menu_icon"><span class="fa fa-bars"></span></label> -->
             <div class="nav">
                 <div class="img1"><img src="img_avatar.jpg" alt="Profile" height="150px" width="150px"></div>
-                <a href="#sandip">Profile Summary</a>
-                <a href="#">Education</a>
-                <a href="#">Experience</a>
-                <a href="#">Skills</a>
+                <a href="#profile1">Profile Summary</a>
+                <a href="#profile3">Education</a>
+                <a href="#profile2">Experience</a>
+                <a href="#profile4">Skills</a>
             </div>
         </div>
         <div class="content">
