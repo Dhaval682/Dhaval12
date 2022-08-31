@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <style>
-        .link1>a{
+        .nav-link{
             color: white;
         }
         .content1{
@@ -72,15 +72,20 @@
 <body>
     <div class="container-fluid m-0 p-0 vh-100 ">
         <div class="container-fluid d-flex flex-column w-100 h-100 m-0" style="background-image: url('Top-Bg.jpg');background-size: cover; background-repeat: no-repeat;">
-            <div class="d-flex flex-row justify-content-between w-75 mx-auto pt-4" >
-                   <div> 
+            <div class="navbar navbar-expand-lg d-flex flex-row justify-content-between w-75 mx-auto pt-4" >
+                    
                        <img src="logo-top.png" alt="logo-top">
-                    </div>
-                    <div class="link1">
-                        <a class="btn"   href="#"><u>HOME</u></a>
-                        <a class="btn" href="#">ABOUT US</a>
-                        <a class="btn" href="#">SOCIAL</a>
-                        <a class="btn" href="#">CONTACT</a>
+                    
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+                    <div class="collapse navbar-collapse d-flex justify-content-lg-end justify-content-sm-start" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a  class="nav-link"  href="#"><u>HOME</u></a>
+                            <a  class="nav-link" href="#">ABOUT US</a>
+                            <a  class="nav-link" href="#">SOCIAL</a>
+                            <a  class="nav-link" href="#">CONTACT</a>
+                        </div>
                     </div>
             </div>
             <div class="content1">
@@ -91,9 +96,9 @@
         </div>
         <div>
             <div class="text-center pt-3 heading1"><h2>Meet Our Team</h2></div>
-            <div class="d-flex flex-row justify-content-center" style="column-gap: 30px;">
+            <div class="d-flex flex-column flex-lg-row justify-content-center" style="column-gap: 30px;">
                 <div class="d-flex flex-column">
-                    <div class="circle">
+                    <div class="circle d-flex justify-content-center">
                         <img height="322px" width="284px" src="profile-1.jpg" alt="profile-1">
                     </div>
                     <div class="paragraph">
@@ -105,7 +110,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column" >
-                    <div class="circle">
+                    <div class="circle d-flex justify-content-center">
                         <img  height="322px" width="284px" src="profile-2.jpg" alt="profile-2">
                     </div>
                     <div class="paragraph">
@@ -117,7 +122,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column">
-                    <div class="circle">
+                    <div class="circle d-flex justify-content-center">
                         <img  height="322px" width="284px" src="profile-3.jpg" alt="profile-3">
                     </div>
                     <div class="paragraph">
@@ -130,7 +135,80 @@
                 </div>
                 </div>
             </div>
+            <div class="d-flex flex-sm-column p-4" style="background-image: url('portfolio-bg.jpg');">
+                <div id="multi-item-example" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#multi-item-example" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#multi-item-example" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#multi-item-example" data-bs-slide-to="2"></li>
+                      </ol>
 
+                      <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                            <div class="carousel-item active d-flex justify-content-center">
+                    
+                                <div class="row d-flex justify-content-around w-75">
+                                        <div class="col-md-3 p-2">
+                                            <img src="portfolio-1.jpg"
+                                            alt="portfolio-1"> 
+                                        </div>
+                            
+                                        <div class="col-md-3 p-2">
+                                            <img class="img-top" src="portfolio-2.jpg"
+                                            alt="portfolio-2">
+                                        </div>
+                            
+                                        <div class="col-md-3 p-2">
+                                            <img class="img-top" src="portfolio-3.jpg"
+                                            alt="portfolio-3">
+                                        </div>
+                                        <div class="col-md-3 p-2"> 
+                                            <img class="img-top" src="portfolio-4.jpg"
+                                                alt="portfolio-4">
+                                        </div>
+                                </div>
+
+                            </div>
+                         <!--/.First slide-->
+
+                         <div class="carousel-item d-flex justify-content-center">
+                    
+                            <div class="row d-flex justify-content-center w-75">
+                                    <div class="col-md-3 p-2">
+                                        <img class="img-top" src="portfolio-2.jpg"
+                                        alt="portfolio-2">
+                                    </div>
+                        
+                                    <div class="col-md-3  p-2">
+                                        <img class="img-top" src="portfolio-4.jpg"
+                                            alt="portfolio-4">
+                                    </div>
+                        
+                                    <div class="col-md-3 p-2">
+                                        <img class="img-top" src="portfolio-3.jpg"
+                                        alt="portfolio-3">
+                                    </div>
+                                    <div class="col-md-3 p-2"> 
+                                        <img  src="portfolio-1.jpg"
+                                        alt="portfolio-1"> 
+                                        
+                                    </div>
+                            </div>
+
+                        </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#multi-item-example" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#multi-item-example" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                </div>
+            </div>
              
 <!-- ___________________________________________
 __________________________________________ -->
@@ -141,7 +219,7 @@ __________________________________________ -->
                  </div>
                  <div>
                     <div class="d-flex flex-row  form-row p-3">
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-sm-3 col-md-3">
                             
                           </div>
                         <div class="form-group col-md-3">
@@ -150,43 +228,43 @@ __________________________________________ -->
                         <div class="form-group col-md-3" style="margin-left: 5px;">
                           <input type="password" class="form-control p-3" id="inputPassword4" placeholder="Last Name">
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-sm-3 col-md-3">
                              
                           </div>
                       </div>
                       <div class="d-flex flex-row  form-row p-3">
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                                 
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                             <input type="email" class="form-control p-3" id="inputEmail4" placeholder="Contact@gmail.com">
                             </div>
-                            <div class="form-group col-md-3" style="margin-left: 5px;">
+                            <div class="form-group col-sm-3 col-md-3" style="margin-left: 5px;">
                             <input type="password" class="form-control p-3" id="inputPassword4" placeholder="Mobile Number">
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                                 
                             </div>
                       </div>
                       <div class="d-flex flex-row  form-row p-3">
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                                     
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-12 col-sm-6 col-md-6">
                                 <textarea name="txt" id="txtname"   rows="3" class="form-control p-3"></textarea>
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                                 
                             </div>
                         </div>
                         <div class="d-flex flex-row  form-row p-3">
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                                     
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-12 col-sm-6 col-md-6">
                                 <button  class="form-control p-3 btn btn-dark" type="submit">SEND</button>
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-sm-3 col-md-3">
                                 
                             </div>
                         </div>
