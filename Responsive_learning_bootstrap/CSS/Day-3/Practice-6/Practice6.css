@@ -1,0 +1,23 @@
+/* Apply background-color */
+/* Apply flex-direction */
+/* Apply display */
+  .container {
+    background-color: red;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  /* Apply flex */
+  .container > .image {
+    flex: 1 0 0%;
+  }
+  /* Apply max-height */
+  /* Apply display */
+  .image > img {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+  }
+  /* Apply flex */
+  .container > .text {
+    flex: 2 0 0%;
+  }

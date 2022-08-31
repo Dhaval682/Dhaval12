@@ -1,0 +1,51 @@
+/* Apply Position */
+/* Apply left */
+/* Apply bottom */
+/* Apply padding */
+.main-element {
+    position: static;
+    left: 10px;
+    bottom: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+/* Apply Position */
+/* Apply padding */
+.sibling-element {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+/* Apply Position */
+/* Apply left */
+/* Apply bottom */
+/* Apply padding */
+.main-element-relative {
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+/* Apply background */
+/* Apply padding */
+.sibling-element-absolute {
+	background: #f2f2f2;
+	padding: 10px;
+} 
+
+.main-element-absolute {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.parent-element-absolute {
+    position: relative;
+    height: 100px;
+    padding: 10px;
+    background-color: #81adc8;
+}
+
+ 

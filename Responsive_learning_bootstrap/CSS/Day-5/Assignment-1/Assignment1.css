@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-1{
+    background-image: url('Top-Bg.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px
+}
+ 
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+
+.logo{
+    display: inline-block;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: white;
+}
+.menu a:hover{
+    background-color: black;
+}
+ 
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+.bot-nav>a{
+    
+    text-decoration: none;
+    text-decoration-style: none;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    
+
+ }
+
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: gray;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+
+}
+.Heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.heading-1 >.p1{
+   font-size: 60px;
+   color: white;
+   text-align: center;
+   padding-bottom: 10px;
+}
+.heading-1 >.p2{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+ }
+
+ @media screen and (max-width: 768px) {
+    .heading-1 >.p1{
+        font-size: 20px;
+        color: white;
+        text-align: center;
+     }
+     .heading-1 >.p2{
+         font-size: 10px;
+         color: white;
+         text-align: center;
+      }
+}
+
+.photo-heading
+{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.photo-heading>h2{
+    text-align: center;
+    color: rgb(114, 114, 114);
+    font-size: 45px;
+    margin: 10px;
+}
+
+.Profile{
+    display: flex;
+    justify-content: center;
+}
+
+.circle>img{
+    border-radius: 50%;
+    margin: 20px;
+    
+}
+ 
+.paragraph>h2,p{
+    text-align: center;
+    line-height: 45px;
+}
+
+.paragraph>p{
+    font-size: 18px;
+    font-style: italic;
+    color: rgb(114, 114, 114);
+}
+
+@media screen and (max-width: 768px) {
+    .Profile{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.main-3{
+    background-image: url('portfolio-bg.jpg');
+    padding: 45px;
+}
+.Gallary{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.Gallary>em{
+    margin: 90px 25px;
+}
+.gallary-1{
+    margin: 15px;
+}
+.insta-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.insta-btn>button{
+    background-color: white;
+    padding: 10px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .main-3{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .Gallary{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .Gallary>em{
+        display: none;
+    }
+}
+
+
+.bot-nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 48, 48);
+    padding: 5px;
+ }
+
+ .bot-nav>img{
+     height: 30px;
+     margin-top: 7px;
+ }
+
+
+ .bot-icon{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 48, 48);
+ }
+
+ .bot-icon>em{
+     margin: 10px 15px;
+ }
+
+ .footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+ }
+
+  .fa-square-facebook {
+     
+     color: black;
+ }
+
+
+
+
+ .main-4{
+    background-color: rgb(252, 3, 127);
+ }
+
+.heading-contact{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.heading-contact>p{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-decoration-line: underline;
+
+}
+
+ .row{
+    display: flex;
+    justify-content: center;
+ }
+ .column{
+    margin: 10px;
+ }
+ .column>button{
+    padding: 10px 237px 10px 237px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+ }
+ .column>input{
+    padding: 10px 10px 10px 5px;
+ }
+ .column1>input{
+    padding: 25px 10px 25px 5px;
+ }
+
+ @media screen and (max-width: 768px) {
+    .main-4{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .column>button{
+        padding: 10px 150px 10px 150px;
+    }
+
+    .column1>input{
+        display: none;
+     }
+
+     
+}
+ 

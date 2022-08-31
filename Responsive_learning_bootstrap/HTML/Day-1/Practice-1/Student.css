@@ -1,0 +1,40 @@
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  font-size: 20px;
+  
+}
+/*Student Resume*/
+/*Student Resume*/
+/*Student Resume*/
+/*Student Resume*/
+
+table{
+    width: 100%;
+    
+}
+/*Student Resume*/
+
+
+.col1:nth-child(even) {
+    background-color: #D6EEEE;
+}
+/*Student Resume*/
+
+.col2 {
+    background-color: #76b2ce;
+}
+/*Student Resume*/
+
+.Student {
+    background-color: #dee8f1;
+}
+/*Student Resume*/
+.row1 {
+    background-color: #d3d2d2;
+}
+
+
+

@@ -1,0 +1,36 @@
+/* Student Report Card*/
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+    font-size: 20px;
+    
+  }
+  /* Student Report Card*/
+  table{
+      width: 100%;
+      
+  }
+  /* Student Report Card*/
+  .col1{
+    text-align: center ;
+}
+/* Student Report Card*/
+  .col1:nth-child(even) {
+      background-color: #D6EEEE;
+  }
+  /* Student Report Card*/
+ /* Student Report Card*/
+  .col2 {
+      background-color: #76b2ce;
+  }
+  /* Student Report Card*/
+  .Student {
+      background-color: #dee8f1;
+  }
+  /* Student Report Card*/
+  .row1 {
+      background-color: #d3d2d2;
+  }
+  
+  /* Student Report Card*/

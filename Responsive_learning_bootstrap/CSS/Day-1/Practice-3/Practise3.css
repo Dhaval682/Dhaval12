@@ -1,0 +1,12 @@
+/*list */
+ol li {
+     display: inline-block;
+     margin-left: 40px;
+ }
+/* Universal Selector*/
+ *
+ {
+     color: blue;
+ }
+ /* Universal Selector*/
+ 

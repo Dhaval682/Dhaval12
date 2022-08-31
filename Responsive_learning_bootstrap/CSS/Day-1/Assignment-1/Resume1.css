@@ -1,0 +1,36 @@
+ 
+ /* Apply Text Align */
+ .col1
+ {
+    text-align: left;
+ }
+/* Apply  padding-left */
+/* Apply  padding-left */
+ .col2
+ {
+    padding-left: 15px;
+ }
+ /* Apply width */
+ /* Apply margin-left */
+ /* Apply margin-left */
+
+ .main1
+ {
+    width: 50%;
+    margin-left: 370px;
+ }
+/* Apply Text Align */
+ .main2
+ {
+    border: 1px solid black; 
+    padding: 30px; 
+    background-color: rgb(197, 197, 174);
+ }
+/* Apply Text Align */
+/* Apply Text Align */
+/* Apply Text Align */
+ /* img
+ {
+    box-shadow: 0.5px 5px;
+ }
+   */

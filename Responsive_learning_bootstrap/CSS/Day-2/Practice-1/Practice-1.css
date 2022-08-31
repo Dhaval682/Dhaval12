@@ -1,0 +1,59 @@
+/* Apply main Border */
+/* Apply main display */
+/* Apply main width */
+.main 
+{
+    border: 1px solid black;
+    display: inline-flexbox;
+    height: 350px;
+    width: 70%;
+    background-color: #b89f9f;
+}
+/* Apply main Border */
+/* Apply main margin */
+/* Apply main float */
+/* Apply main height */
+
+.main1 
+{
+    border: 1px solid black;
+    margin: 20px;
+    float: left;
+    width: 30%;
+    height:280px;
+    text-align: center;
+    background-color:orange;
+}
+/* Apply main Border */
+/* Apply main border */
+/* Apply main margin */
+/* Apply main float */
+/* Apply main height */
+.main2 
+{
+    border: 1px solid black;
+    margin: 20px;
+    float: left;
+    width: 30%;
+    height:280px;
+    margin-left: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+/* Apply main Border */
+/* Apply main margin */
+/* Apply main width */
+
+.main3 
+{
+    border: 1px solid black;
+    margin: 20px;
+    float:right;
+    width: 30%;
+    height:280px;
+    text-align: center;
+    background-color: green;
+}
+
+
