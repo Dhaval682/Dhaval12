@@ -10,16 +10,21 @@
 </head> 
 <body>
     <div class="container">
-        <div class="header">
-            <!-- <input type="checkbox" id="check_id">
-            <label for="check_id" class="menu_icon"><span class="fa fa-bars"></span></label> -->
-            <div class="nav">
-                <div class="img1"><img src="img_avatar.jpg" alt="Profile" height="150px" width="150px"></div>
-                <a href="#profile1">Profile Summary</a>
-                <a href="#profile3">Education</a>
-                <a href="#profile2">Experience</a>
-                <a href="#profile4">Skills</a>
-            </div>
+        <div class="header"></div>
+        <input type="checkbox" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner top"></div>
+            <div class="spinner middle"></div>
+            <div class="spinner bottom"></div>
+        </label>
+        <div id="sidebarMenu">
+            <div class="img1"><img src="img_avatar.jpg" alt="Profile" height="150px" width="150px"></div>
+            <ul class="menu">
+                <li><a href="#">Profile Summary</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Work Experience</a></li>
+                <li><a href="#">Skills</a></li>
+            </ul>
         </div>
         <div class="content">
             <div class="profile1">
