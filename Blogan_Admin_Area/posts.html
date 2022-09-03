@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#index.html" class="nav-link px-2 active">Dashboard</a>
+                        <a href="/Blogan_Admin_Area/index.html" class="nav-link px-2">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Blogan_Admin_Area/posts.html" class="nav-link px-2">Post</a>
+                        <a href="#post.html" class="nav-link px-2 active">Post</a>
                     </li>
                     <li class="nav-item">
                         <a href="/Blogan_Admin_Area/categories.html" class="nav-link px-2">Categories</a>
@@ -37,10 +37,10 @@
                     <li class="nav-item dropdown mr-3">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user"></i> Welcome Brad</a>
                         <div class="dropdown-menu">
-                            <a href="/Blogan_Admin_Area/profile.html" class="dropdown-item">
+                            <a href="profile.html" class="dropdown-item">
                                 <i class="fa fa-user-circle"></i> Profile
                             </a>
-                            <a href="/Blogan_Admin_Area/setting.html" class="dropdown-item">
+                            <a href="setting.html" class="dropdown-item">
                                 <i class="fa fa-user-gear"></i> Setting
                             </a>
                         </div>
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1><i class="fa fa-gear"></i> Dashboard</h1>
+                    <h1><i class="fa fa-gear"></i> Posts</h1>
                 </div>
             </div>
         </div>
@@ -66,22 +66,14 @@
     <section id="action" class="py-4 mb-4 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#addPostModal"> 
-                        <i class="fa fa-plus"></i> Add Post
-                    </a> 
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#addCategoryModal"> 
-                        <i class="fa fa-plus"></i> Add Category
-                    </a> 
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#addUserModal"> 
-                        <i class="fa fa-plus"></i> Add User
-                    </a> 
-                </div>
-              
+                 <div class="col-md-6 ms-auto">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary">Search</button>
+                        </span>
+                    </div>
+                 </div>
             </div>
         </div>
    </section>
@@ -89,7 +81,7 @@
    <section id="posts">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col">
                  <div class="card">
                      <div class="card-header">
                          <h4>Latest Posts</h4>
@@ -173,37 +165,19 @@
                             </tr>
                          </tbody>
                      </table>
+
+                     <nav class="ml-4" style="margin-left: 10px;">
+                        <ul class="pagination">
+                            <li class="page-item disable"><a href="#" class="page-link">Previous</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                        </ul>
+                     </nav>
+
                  </div> 
             </div>
-             <div class="col-md-3">
-                 <div class="card text-center bg-primary text-white mb-3">
-                     <div class="card-body">
-                         <h3>Posts</h3>
-                         <h1 class="display-4">
-                             <em class="fa fa-pencil"></em> 6
-                         </h1>
-                         <a href="posts.html " class="btn btn-outline-light btn-sm">View</a>
-                     </div>
-                 </div>
-                 <div class="card text-center bg-success text-white mb-3">
-                    <div class="card-body">
-                        <h3>Categories</h3>
-                        <h1 class="display-4">
-                            <em class="fa fa-folder-open-o"></em> 4
-                        </h1>
-                        <a href="categories.html " class="btn btn-outline-light btn-sm">View</a>
-                    </div>
-                </div>
-                <div class="card text-center bg-warning text-white mb-3">
-                    <div class="card-body">
-                        <h3>Users</h3>
-                        <h1 class="display-4">
-                            <em class="fa fa-users"></em> 2
-                        </h1>
-                        <a href="users.html " class="btn btn-outline-light btn-sm">View</a>
-                    </div>
-                </div>
-             </div>
         </div>
     </div>
 </section>
@@ -220,114 +194,6 @@
         </div>
     </div>
 </footer>
-
-
-   <div class="modal fade" id="addPostModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                     <h5 class="modal-title">Add Post</h5>
-                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group mt-3">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for="category">Category</label>
-                             <select class="form-select" aria-label="Default select example">
-                                 <option value="">Web Develpoment</option>
-                                 <option value="">Tech Gadgets</option>
-                                 <option value="">Business</option>
-                                 <option value="">Health & Wellness</option>
-                             </select>
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for="file" class="form-label">Image Upload</label><br>
-                            <input type="file" class="form-control-file"><br>
-                            <small class="form-text text-muted">
-                                Max Size 3mb
-                            </small>
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for="body">Body</label>
-                             <textarea class="form-control"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" data-dismiss="modal">Save Changes</button>
-                </div>
-            </div>
-        </div>
-   </div>
-
-
-
-
-   <div class="modal fade" id="addCategoryModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-success text-white">
-                 <h5 class="modal-title">Add Category</h5>
-                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group mt-3">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="addUserModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-warning text-white">
-                 <h5 class="modal-title">Add User</h5>
-                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group mt-3">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="password">Password</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="name">Confirm Password</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
