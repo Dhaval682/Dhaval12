@@ -45,6 +45,7 @@ function resetForm() {
 }
 
 function onEdit(td) {
+    document.getElementById('submitbtn').value="Update";
     selectedRow = td.parentElement.parentElement;
     document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
     document.getElementById("email").value = selectedRow.cells[1].innerHTML;
