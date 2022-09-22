@@ -79,3 +79,26 @@ function validate() {
     }
     return isValid;
 }
+
+// DropDown
+// $(document).ready(function(){
+//     $("span").show();
+//     $("#country").click(function(){
+//         $("option").each(function(index,attr){
+//           if($(this).prop("selected")){
+//              if(index == 0){
+//                      $("span").show();
+//              } else {
+//              $("span").each(function(ind,attr){
+//                  if (ind == index-1){
+//                      $(this).show();
+//                  } else {
+//                      $(this).hide();
+//                  }
+//              })
+//              }
+//          }
+//         });
+//     })
+ 
+// })
