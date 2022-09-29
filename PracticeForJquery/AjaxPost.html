@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Practice-2</title>
+</head>
+
+<body>
+    <section>
+        <form>
+            <label for="txtTitle">Title</label>
+            <input type="text" id="txtTitle"><br><br>
+            <label for="txtBody">Body</label>
+            <textarea name="body" id="txtBody" cols="30" rows="5"></textarea>
+            <button>Post Data</button>
+        </form>
+    </section>
+    <script>
+        // $(document).ready(function () {
+
+        //     $("button").click(function () {
+
+        //         var title = $("#txtTitle").val();
+        //         var body = $("#txtBody").val();
+        //         console.log(title, body)
+        //         var obj = { Title: title, Body: body }
+        //         alert(obj)
+        //         $.ajax({
+        //             url: "https://gorest.co.in/public/v2/posts",
+        //             data: JSON.stringify(obj),
+        //             type: "POST",
+        //             dataType: "json",
+        //             success: function (data, status, xhr) {
+        //                 alert(data)
+        //             },
+        //             error: function (xhr) {
+        //                 console.log(err.status)
+        //             },
+
+        //         })
+        //     })
+
+
+        // });
+
+
+        $(document).ready(function () {
+             $("button").click(function () {
+                 var person = new Object();
+                 person.title = $('#txtTitle').val();
+                 person.body = $('#txtBody').val();
+                 $.ajax({
+                     url: 'https://gorest.co.in/public/v2/posts',
+                     type: 'POST',
+                     dataType: 'json',
+                     data: person,
+                     success: function (data, textStatus, xhr) {
+                         console.log(data);
+                     },
+                     error: function (xhr, textStatus, errorThrown) {
+                         console.log('Error in Operation');
+                     }
+                 });
+             });
+         });
+
+    </script>
+</body>
+
+</html>
