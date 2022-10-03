@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q. Dividend/Divisor Simplification 
+        Simplified the value of dividend/divisor.Create a function that returns the Simplified value of dividend/divisor.
+        Remove the common value from dividend and divisor.
+        For Example there Input is 25/15 then output will 5/3.In dividend(25 = 5*5) and divisor(15=3*5), Remove Common value from dividend and divisor which is 5 and output is 5/3.
+
+
+        To illustrate:
+        1.  Input   : 25/15   
+            Explanation :  25 = 5*5 and  15 = 3*5 (Common value is 5 and Remove it). 
+            Output : 5/3
+
+        2. Input   : 50/20
+            Explanation :  50 = 2*5*5 and 20 = 2*2*5  (Common value is 2,5 and Remove it).  
+            Output : 5/2 -->
+
+            <Script>
+                $(document).ready(function(){
+                    var hcf =[];
+                    var hcf2=[]
+                    var total=[];
+                    var a=1;
+                const number1=prompt("Emter first Number");
+                const number2=prompt("Emter second Number");
+
+                    for(let i=2;i<number1-1;i++)
+                    {
+                        if(a*i==0)
+                        {
+                            total.push(i);
+                        }
+                        
+                    }
+                
+                    console.log(total)
+                // for(let i=1;i<=number1;i++/*&&i<=number2.length;i++*/)
+                // {
+                //     if(number1 % i ==0)
+                //     {
+                //        // hcf.push()
+                //        console.log(i)
+                //     }
+                //     // if( number2%i !== 0)
+                //     // {
+                       
+                //     //     hcf2.push(i);
+                       
+                //     // }
+                   
+                // }
+
+                // for(let i=0;i<hcf.length;i++)
+                // {
+                //     for(let j=0;j<hcf2.length;j++)
+                //     {
+                //         if(hcf[i]!=hcf2[j])
+                //         {
+                //             total.push(hcf2[j]);
+                //         }
+                //     }
+                // }
+                console.log(total)
+                var dcm=hcf/hcf2;
+                console.log(dcm);
+                });
+               
+            </Script>
+</body>
+</html>
