@@ -102,3 +102,137 @@ function validate() {
 //     })
  
 // })
+
+// interface IRetailShop{
+//     InventoryId : number;
+//     Name : string;
+//     Quantity : number;
+//     Price : number;
+// }
+
+// var obj : IRetailShop[] =  [
+// { InventoryId :1,Name:"Maggie",Quantity :50,Price:12},
+// { InventoryId :2,Name:"Pasta",Quantity :100,Price:45},
+// { InventoryId :3,Name:"biscuit",Quantity:200,Price:15}
+
+// ];
+
+// class RetailShop {
+
+// RecordQty(){
+//     for (const val of obj) 
+//     {
+//          console.log
+//          (`Id: ${val.InventoryId},
+//           Name: ${val.Name},
+//           Quantity: ${val.Quantity},
+//           Price: ${val.Price} `);
+//     }
+// }
+// Purchase(id:number,Item:number){
+//     var data = obj.filter(x=>x.InventoryId==id);
+//     if(data[0].Quantity-Item >= 0){
+//         obj[obj.indexOf(data[0])].Quantity = Item;
+//         console.log("Order is Placed !");
+//      }
+    
+//     else if  (Item<5){
+//             console.log("Qty Should  be more than or equal to 5");
+//         }
+        
+//     else{
+//         console.log("Reorder, No enough Quantity ");
+//          }
+//         }
+//     }
+
+// var PurchasedItem = new RetailShop();
+// PurchasedItem.RecordQty();
+// PurchasedItem.Purchase(1,10);
+// PurchasedItem.RecordQty();
+
+
+
+
+
+
+
+var emp:any = [
+    {Id:1, FirstName:"Viral", LastName:"Gujarati", Address:"21,Rajkot", Salary: 20000},
+    {Id:2, FirstName:"Rahul", LastName:"Raval", Address:"22,Surat", Salary: 21000},
+    {Id:3, FirstName:"Krishna", LastName:"Gabani", Address:"33,Gondal", Salary: 15000},
+    {Id:4, FirstName:"Radha", LastName:"Patel", Address:"32,Rajkot", Salary: 16000},
+    {Id:5, FirstName:"Mayur", LastName:"Patel", Address:"25,Ahmedabad", Salary: 25000}
+];
+
+var newEmp :any = [
+    { Id: 6, FirstName: 'virat',LastName: 'dave', Address: '45,surat', Salary: 14500 }
+  
+];
+
+var empNewemp = emp.concat(newEmp); 
+console.log("empNewemp : " , empNewemp );
+
+
+//employee data =====:
+function GetEmployeeData(){
+  console.log(emp);
+  return emp;
+}
+
+function InsertEmp() : void {
+  //using push method
+console.log('Add Employee using Push');
+emp.push({Id: 6, FirstName: 'Mahesh',LastName: 'rana', Address: '23,Vadodra', Salary: 10000});
+console.log(emp);
+
+}
+
+//Delete employee
+function Deleteemp(){
+return emp.pop();
+}
+
+//find full name of employee:
+function findfullName() {
+  console.log('FullName:')
+
+  for (var fullName of emp) {
+     var fname = fullName.FirstName;
+    var lname = fullName.LastName;
+    console.log( `${fname} ${lname}`);
+  }
+}
+
+function extractAdd(){
+  console.log('Split Employee Address :');
+
+  for (var empAdd of emp)
+  {
+    var addr = empAdd.Address;
+    var splliting = addr.split(',');
+    console.log(splliting);
+
+  }
+}
+
+//Find Pf Employee:
+function employeePF(){
+  for(var empPf of emp ){
+      var fullname = empPf.FirstName+" "+empPf.LastName;
+      
+      var SalaryEmp = empPf.Salary*(0.20); 
+      var getSalary = empPf.Salary - SalaryEmp;
+      console.log("Pf cut is :" ,SalaryEmp);
+      console.log(` Full name is : ${fullname} and Final Salary is : ${getSalary}`);        
+     
+  }
+}
+
+InsertEmp();
+findfullName();
+Deleteemp();
+extractAdd();
+employeePF();
+
+
