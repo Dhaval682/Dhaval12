@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+            
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	
+</head>
+<body>
+	  <!-- <select id="dropDownlist"></select>
+    <button>click</button> -->
+
+    <!-- Data_Show_In_table -->
+    <section>
+        <table>
+            <thead>
+                <th>UserId</th>
+                <th>Title</th>
+                <th>Body</th>
+            </thead>
+            <tbody id="dataPrint"></tbody>
+        </table>
+    </section>
+    <script type="text/javascript">
+        // $(document).ready(function () {
+			
+		//  $('button').click(function(){
+		// 	$.ajax(
+		// 	{  url:'https://gorest.co.in/public/v2/users',
+		// 		dataType: 'json',  
+				       
+		// 		success: function (data,status,xhr) {  
+                   
+        //            $.each(data,function(i,field){
+		// 			$('#dropDownlist').append($("<option></option>").val(field.id).html(field.name));
+        //            });
+		// 		},
+		// 		error: function (jqXhr, textStatus, errorMessage) {  
+		// 			$('p').append('Error: ' + errorMessage);
+		// 		}
+		// 	});
+		//  });
+       
+
+        // });
+
+// onload
+        // $(window).on("load",function () {
+			
+             
+        //        $.ajax(
+        //        {  url:'https://gorest.co.in/public/v2/users',
+        //            dataType: 'json',  
+                          
+        //            success: function (data,status,xhr) {  
+                      
+        //               $.each(data,function(i,field){
+        //                $('#dropDownlist').append($("<option></option>").val(field.id).html(field.name));
+        //               });
+        //            },
+        //            error: function (jqXhr, textStatus, errorMessage) {  
+        //                $('p').append('Error: ' + errorMessage);
+        //            }
+        //        });
+            
+   
+        //    });
+
+
+        //    data show in tabular form
+
+           $(window).on("load",function(){
+            $.ajax({
+
+                url :"https://gorest.co.in/public/v2/posts",
+                type:"GET",
+                dataType:"json",
+                success:function(data,status,xhr){
+                    $.each(data,function(i,value){
+                        $("#dataPrint").append($("<tr></tr>").html(`<td>${value.user_id}</td><td>${value.title}</td><td>${value.body}</td>`))
+                    });
+                }
+                });
+        })
+    </script>
+</body>
+</html>

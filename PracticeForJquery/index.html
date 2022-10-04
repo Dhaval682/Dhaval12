@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Practice Jquery</title>
+</head>
+<body>
+    <div>
+    
+    </div>
+        
+        <script>
+    
+            async function getfile(){
+                var posts=await fetch('https://gorest.co.in/public/v2/posts');
+                var data=await posts.json();
+                console.log(data)
+               show(data);
+                        
+            }
+            function show(codata){
+                var text 
+                var text = "<table border='1|1 '>";
+                 for(var i=0;i<codata.length;i++)
+                 {
+                     console.log(codata.length)
+    
+                    text+="<tr>";
+                        text+="<td>"+codata[i].id+"</td>";
+                        text+="<td>"+codata[i].user_id+"</td>";
+                        text+="<td>"+codata[i].title+"</td>";
+                            
+                            text+="</tr>";
+                 }
+                 text+="</table>";
+                 $("div").append(text);
+            }
+            getfile();
+        </script>
+</body>
+</html>
