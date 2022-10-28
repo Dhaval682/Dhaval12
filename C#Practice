@@ -1,0 +1,117 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
+namespace ConsoleApp20
+{
+    public static  class testdemo
+    {
+       public static int vowelcount(this string message)
+        {
+            int count = 0;
+            foreach (var item in message)
+            {
+                if(item=='a' || item=='e'||item=='o'||item=='i'||item=='u')
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+    }
+    delegate void display(string message);
+    class Employee
+    {
+        public int StudentID { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public override string ToString()
+        {
+            return $" StudentID {StudentID} Name {Name} Address {Address} ";
+        }
+    }
+    class testinfo<T>
+    {
+        public void display<T1>(T a,T1 b)
+        {
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+    }    
+    class test
+    {
+        public static void info(string message)
+        {
+            Console.WriteLine(message);
+        }
+        public static void info1(string message)
+        {
+            Console.WriteLine(message+"---info1");
+        }
+        public static int add(int a,int b)
+        {
+            return a + b;
+        }
+    }
+    class Program
+    {
+        //event display myevent;
+        static void Main(string[] args)
+        {
+            string greeting = "Good morning everyone";
+            Console.WriteLine(greeting.vowelcount());
+            //    int[] array = { 23, 5, 6, 774, 800, 34, 56 };
+            //    var list = array.Where((a) => a > 700).ToList();
+            //    var result = from k in array
+            //                 where k > 700
+            //                 select k;
+            //    Console.WriteLine(list.GetType().Name);
+            //    NewMethod<int>(list);
+            //    NewMethod<int>(result.ToList());
+            // Program program = new Program();
+            // program.myevent += new display(test.info);
+            // program.myevent += new display(test.info1);
+            // program.myevent("welcome");
+            // Func<int, int, int> func = new Func<int, int, int>(test.add);
+            // Console.WriteLine(func(12, 54));
+            // Func<string, int> func1 = new Func<string, int>((message) =>
+            //   message.Length);
+            // Console.WriteLine(func1("Welcome everyone"));
+            //Func<string, string,Task<string>> func2 = new Func<string, string,Task<string>>(
+            //async  (a, b) =>
+            //{
+            //    await Task.Delay(8000); 
+            //    return String.Concat(a, "  ", b);
+            //}
+            //     );
+            // Console.WriteLine(func2("abc", "xyz").Result);
+            // //display display = new display(test.info);
+            // //display("Hello India");
+            // List<Employee> employees = new List<Employee>()
+            // { new Employee() { Address="Ahmedabad",Name="Teena",StudentID=1},
+            //     new Employee(){StudentID=2,Address="Ahmedabad",Name="Reena"}
+            // };
+            // employees.Add(new Employee() { StudentID = 3, Address = "Mumbai", Name = "Rita" });
+            // foreach (var item in employees)
+            // {
+            //     Console.WriteLine(item.Name + " " + item.StudentID + "  " + item.Address);
+            // }
+            //var res= employees.Where((e) => e.Address == "Ahmeda").ToList();
+            // NewMethod<Employee>(res);
+            // //testinfo<string> testinfo = new testinfo<string>();
+            // //testinfo.display<int>("varsha",45);
+            // //testinfo<int> t = new testinfo<int>();
+            // //t.display<string>(55,"hello");
+            // //Console.WriteLine("Hello World!");
+            //    Console.ReadLine();
+            //    static void NewMethod<T>(List<T> list)
+            //    {
+            //        foreach (var item in list)
+            //        {
+            //            Console.WriteLine(item);
+            //        }
+            //    }
+            //}
+        }
+    }
+}

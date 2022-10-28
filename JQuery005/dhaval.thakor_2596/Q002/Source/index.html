@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Practice-2</title>
+</head>
+<body>
+    <section class="container">
+        <form >
+            <label for="weight">Weight</label>
+            <input type="number" name="" id="weight" required><br><br>
+    
+            <label for="height">Height</label>
+            <input type="text" name="" id="height" required><br><br>
+    
+            <input type="submit" name="btn" value="calculate">
+    
+        </form>
+        <div class="result">
+            <h2 class="title"></h2>
+        </div>
+        <div class="result1">
+            <h2 class="title1"></h2>
+        </div>
+    </section>
+   
+
+    <script>
+        $(document).ready(function(){
+            var form=$("form");
+            form.on("submit",function(e){
+                e.preventDefault();
+                var resultDiv=$(".result .title");
+                var resultDiv1=$(".result1 .title1");
+
+                function calcBMI(){
+                    var weight=$("#weight").val();
+                    var height=$("#height").val();
+                    var bmi=weight/(height*height);
+                    console.log(bmi);
+                    return bmi.toFixed(2);
+                }
+
+                function bmiState(){
+                    if(calcBMI()<16){
+                        return "Severe Thinness";
+                    }
+                    if(calcBMI()>16 && calcBMI()<17){
+                        return "Moderate Thinness";
+                    }
+                    if(calcBMI()>17&& calcBMI()<18.5){
+                        return "Mild Thinness";
+                    }
+                    if(calcBMI()>18.5&& calcBMI()<25){
+                        return "Normal";
+                    }
+                    if(calcBMI()>25&& calcBMI()<30){
+                        return "Overweight";
+                    }
+                    if(calcBMI()>30&& calcBMI()<35){
+                        return "Obese Class I";
+                    }
+                    if(calcBMI()>35&& calcBMI()<40){
+                        return "Obese Class II";
+                    }
+                    if(calcBMI()>40){
+                        return "Obese Class III";
+                    }
+                }
+
+                function bmiStateResult(){
+                    if(calcBMI()<18.5){
+                        return "underweight->Red";
+                    }
+                    if(calcBMI()>18.5 && calcBMI()<24.9){
+                        return "Normal->Green";
+                    }
+                    if(calcBMI()>25&& calcBMI()<29.9){
+                        return "Overweight->Yellow";
+                    }
+                    if(calcBMI()>30){
+                        return "Obesity->red";
+                    }
+                     
+                }
+                resultDiv.html("result="+bmiState());
+                resultDiv1.html("result="+bmiStateResult());
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Practice-3</title>
+</head>
+<body>
+    <select id="dropDownlist"></select>
+    <button>click</button>
+    <button id="dont">get</button>
+     
+<br><br>
+    <table id="table">
+        <tr>
+            <th>users</th>
+            <th>title</th>
+            <th>post</th>
+        </tr>
+    </table>
+    <button id="btn">click</button>
+    <script>
+        var arr=[];
+    //    $(document).ready(function(){
+    //        $.ajax({
+    //            url:" https://gorest.co.in/public/v2/users",
+    //            type:"GET",
+    //            success:function(data)
+    //            {
+    //                 arr=data;
+    //                 console.log(arr)
+    //            }
+    //        })
+    //        $('button').click(function(){
+    //         $.each(arr,function(index,val){
+    //            console.log(val)
+    //             $("#dropDownlist").append(`<option value='${val.id}'>${val.name}</option>`)
+    //        })
+    //        })
+           
+    //    })
+
+
+
+
+    $(document).ready(function(){
+        $.ajax({
+               url:"https://gorest.co.in/public/v2/posts",
+               type:"GET",
+               success:function(data)
+               {
+                    arr=data;
+                    console.log(arr)
+               }
+           })
+
+           $('button').click(function(){
+            $.each(arr,function(index,val){
+               console.log(val)
+                $("#dropDownlist").append(`<option value='${val.id}'>${val.id}</option>`)
+           })
+           })
+
+           $("#dropDownlist").change(function(e){
+                    var idsx=$(this).val();
+           })
+
+           var obj={user_id:"4020",title:"hiii",body:"Name"}
+           $("#btn").click(function(){
+            $.ajax({
+               url:`https://gorest.co.in/public/v2/users/2000/posts`,
+               data:obj,
+               type:"POST",
+               headers:{Authorization: "Bearer 34c8b06831c5f0e9ae56bbad336741f45dd9b448b2ffa2b41ac1df9596da1e13"},
+               success:function(data){
+                   console.log(data)
+               }
+           })
+           })
+           $("#dont").click(function(){
+            $.ajax({
+               url:"https://gorest.co.in/public/v2/posts",
+               type:"GET",
+               success:function(data)
+               {
+                    arr=data;
+                    console.log(arr)
+               }
+           })
+          
+           })
+          
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <title>Practice1</title>
+</head>
+<body>
+   
+        <label for="fname">Name</label>
+        <input type="hidden" id="Idx">
+        <input type="text" name="Name" id="fname" placeholder="Enter Name">
+        <br><br>
+        
+        <label for="desc">Description</label>
+        <textarea name="description" id="desc" cols="50" rows="4"></textarea>
+        <br><br>
+
+        <label for="txtPrice">Price</label>
+        <input type="Number" name="Name" id="txtPrice" placeholder="Enter Price">
+        
+        <br><br>
+
+        <label for="fileimage">Upload Image</label>
+        <input type="file" name="Image" id="fileimage" value=""><br><br>
+
+        <label for="status">Status</label>
+        <input type="radio" name="Status" id="radioActive" value="Active">
+        <label for="radioActive">Active</label>
+
+        <input type="radio" name="Status" id="radioinActive" value="Inactive">
+        <label for="radioinActive">Inactive</label><br><br>
+
+        <label for="categories">Categorise</label>
+        <select name="food" id="dpFood">
+            <option value="Apple">Apple</option>
+            <option value="Orange">Orange</option>
+            <option value="Mango">Mango</option>
+        </select>
+
+        <button id="btnSubmit">Submit</button>
+        <button onclick="update()">update</button>
+   
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Status</th>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+           <tbody id="data">
+
+           </tbody>
+        </table>
+    
+</body>
+</html>

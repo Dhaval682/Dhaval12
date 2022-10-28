@@ -52,15 +52,16 @@
         $(document).ready(function(){
             $("button").click(function(){
                 $.ajax({
-                url:" https://gorest.co.in/public/v2/posts",
+                url:" https://gorest.co.in/public/v2users/1930/posts",
                 data: dataPost,
                 dataType:"json",
                 accepts:"application/json",
                 contentType:"application/json",
                 type:"POST",
-                beforeSend: function (xhr) {
-                        xhr.setRequestHeader('Authorization', 'Bearer 9066168fcf01320b610099dd94fd366af614384f34e6d50d07f7e0a43494384f');
-                    },                       
+                headers:{Authorization:'Bearer 34c8b06831c5f0e9ae56bbad336741f45dd9b448b2ffa2b41ac1df9596da1e13'},
+                // beforeSend: function (xhr) {
+                //         xhr.setRequestHeader('Authorization', 'Bearer 9066168fcf01320b610099dd94fd366af614384f34e6d50d07f7e0a43494384f');
+                //     },                       
                 success:function(data){
                     console.log(data);
                 },
