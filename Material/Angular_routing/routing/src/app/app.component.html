@@ -1,0 +1,10 @@
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/crisis-center" routerLinkActive="active" ariaCurrentWhenActive="page">Crisis Center</a>
+  <a routerLink="/heroes" routerLinkActive="active" ariaCurrentWhenActive="page">Heroes</a>
+</nav>
+<ul *ngFor="let item of list">
+  <!-- <li><a [routerLink]="['/detail', item.ProduchrotID]" [queryParams]="{name: item.Name}">{{item.Name}}</a></li> -->
+  <li><button (click)="details(item)">{{item.Name}}</button></li>
+  </ul>
+<router-outlet></router-outlet>
