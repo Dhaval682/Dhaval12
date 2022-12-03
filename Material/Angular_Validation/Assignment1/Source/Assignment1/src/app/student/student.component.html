@@ -1,0 +1,429 @@
+<div class="container-fluid">
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+       
+        <div class="border-4 bg-zinc-300 border-slate-500 m-1">
+            <h1 class="text-4xl mt-4 underline font-medium decoration-3 text-center">Student Admission Form</h1>
+            <div class="pb-6 m-1">
+                <h1 class="text-2xl mt-4 underline font-medium decoration-3">Student Details</h1>
+                <div class="grid grid-cols-3 gap-4 mt-2" formGroupName="Name">
+                    <div>
+                        <label for="fName" class="text-xl">First Name</label>
+                        <input type="text" id="fName" placeholder="Enter First Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1" formControlName="FirstName">
+                        <span *ngIf="Student_FName?.invalid  && Student_FName?.touched">
+                            <span *ngIf="Student_FName?.errors?.['required']" class="text-red-600 text-lg">
+                                * First Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="mName" class="text-xl">Middle Name</label>
+                        <input type="text" id="mName" placeholder="Enter Middle Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="MiddleName">
+                        <span *ngIf="Student_MName?.invalid  && Student_MName?.touched">
+                            <span *ngIf="Student_MName?.errors?.['required']" class="text-red-600 text-lg">
+                                * Middle Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="lName" class="text-xl">Last Name</label>
+                        <input type="text" id="lName" placeholder="Enter Last Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="LastName">
+                        <span *ngIf="Student_LName?.invalid  && Student_LName?.touched">
+                            <span *ngIf="Student_LName?.errors?.['required']" class="text-red-600 text-lg">
+                                * Last Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="dob" class="text-xl">Date Of Birth</label>
+                        <input type="date" id="dob" class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1">
+                    </div>
+                    <div>
+                        <label for="pBirth" class="text-xl">Place Of Birth</label>
+                        <input type="text" id="pBirth" placeholder="Enter Place Of Birth"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="PlaceOfBirth">
+                        <span *ngIf="Student_PlaceOfBirth?.invalid  && Student_PlaceOfBirth?.touched">
+                            <span *ngIf="Student_PlaceOfBirth?.errors?.['required']" class="text-red-600 text-lg">
+                                * Place Of Birth is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="fLang" class="text-xl">First Language</label>
+                        <input type="text" id="fLang" placeholder="Enter First Language"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="MotherLang">
+                        <span *ngIf="Student_MotherLang?.invalid  && Student_MotherLang?.touched">
+                            <span *ngIf="Student_MotherLang?.errors?.['required']" class="text-red-600 text-lg">
+                                * First Language is Required !
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <h1 class="text-2xl mt-4 underline font-medium decoration-3">Student Address</h1>
+                <div class="grid grid-cols-4 gap-4 mt-1" formGroupName="Address">
+                    <div>
+                        <label for="city" class="text-xl">City</label>
+                        <input type="text" id="city" placeholder="Enter City Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1" formControlName="City">
+                        <span *ngIf="Student_City?.invalid  && Student_City?.touched">
+                            <span *ngIf="Student_City?.errors?.['required']" class="text-red-600 text-lg">
+                                * City is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="state" class="text-xl">State</label>
+                        <input type="text" id="state" placeholder="Enter State Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="State">
+                        <span *ngIf="Student_State?.invalid  && Student_State?.touched">
+                            <span *ngIf="Student_State?.errors?.['required']" class="text-red-600 text-lg">
+                                * State is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="country" class="text-xl">Country</label>
+                        <input type="text" id="country" placeholder="Enter Country Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="Country">
+                        <span *ngIf="Student_Country?.invalid  && Student_Country?.touched">
+                            <span *ngIf="Student_Country?.errors?.['required']" class="text-red-600 text-lg">
+                                * Country is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="PinCode" class="text-xl">PinCode</label>
+                        <input type="text" id="PinCode" placeholder="Enter  PinCode"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1" formControlName="Pincode">
+                        <span *ngIf="Student_Pincode?.invalid  && Student_Pincode?.touched">
+                            <span *ngIf="Student_Pincode?.errors?.['required']" class="text-red-600 text-lg">
+                                * PinCode is Required !
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- --------Father------------- -->
+            <div class="border-t-4 border-slate-500  pb-6 m-1">
+                <h1 class="text-2xl mt-4 underline font-medium decoration-3">Father Details</h1>
+                <div class="grid grid-cols-3 gap-4 mt-2" formGroupName="Father">
+                    <div>
+                        <label for="fName" class="text-xl">First Name</label>
+                        <input type="text" id="fName" placeholder="Enter First Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1"
+                            formControlName="FatherFirstName">
+                        <span *ngIf="father_FirstName?.invalid  && father_FirstName?.touched">
+                            <span *ngIf="father_FirstName?.errors?.['required']" class="text-red-600 text-lg">
+                                * First Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="mName" class="text-xl">Middle Name</label>
+                        <input type="text" id="fName" placeholder="Enter Middle Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="FatherMiddleName">
+                        <span *ngIf="father_MiddleName?.invalid  && father_MiddleName?.touched">
+                            <span *ngIf="father_MiddleName?.errors?.['required']" class="text-red-600 text-lg">
+                                * Middle Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="lName" class="text-xl">Last Name</label>
+                        <input type="text" id="lName" placeholder="Enter Last Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="FatherLastName">
+                        <span *ngIf="father_LastName?.invalid  && father_LastName?.touched">
+                            <span *ngIf="father_LastName?.errors?.['required']" class="text-red-600 text-lg">
+                                * Last Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="email" class="text-xl">Email</label>
+                        <input type="text" id="email" placeholder="Enter Email"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1" formControlName="FatherEmail">
+                        <span class="text-red-600 text-lg"
+                            *ngIf="father_Email?.hasError('required') && (father_Email?.dirty || father_Email?.touched)">Email
+                            field is required !</span>
+                        <span class="text-red-600 text-lg"
+                            *ngIf="father_Email?.hasError('pattern') && (father_Email?.dirty || father_Email?.touched)">Please
+                            enter valid email address</span>
+
+                    </div>
+                    <div>
+                        <label for="education" class="text-xl">Education Qualification</label>
+                        <input type="text" id="education" placeholder="Enter Education Details"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="EducationQualification">
+                        <span *ngIf="father_Education?.invalid  && father_Education?.touched">
+                            <span *ngIf="father_Education?.errors?.['required']" class="text-red-600 text-lg">
+                                * Education Qualification is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="proffession" class="text-xl">Profession </label>
+                        <input type="text" id="proffession" placeholder="Enter Profession"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1"
+                            formControlName="FatherProfession">
+                        <span *ngIf="father_Profession?.invalid  && father_Profession?.touched">
+                            <span *ngIf="father_Profession?.errors?.['required']" class="text-red-600 text-lg">
+                                * Profession is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="designation" class="text-xl">Designation </label>
+                        <input type="text" id="designation" placeholder="Enter Designation"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="FatherDesignation">
+                        <span *ngIf="father_Designation?.invalid  && father_Designation?.touched">
+                            <span *ngIf="father_Designation?.errors?.['required']" class="text-red-600 text-lg">
+                                * Designation is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="phone" class="text-xl">Phone Number</label>
+                        <input type="text" id="phone" placeholder="Enter Phone Number"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="FatherPhone">
+                        <span class="text-red-600 text-lg"
+                            *ngIf="father_Phone?.hasError('required') && (father_Phone?.dirty || father_Phone?.touched)">Phone
+                            Number
+                            field is required !</span>
+                        <span class="text-red-600 text-lg"
+                            *ngIf="father_Phone?.hasError('pattern') && (father_Phone?.dirty || father_Phone?.touched)">Please
+                            enter valid Phone Number</span>
+
+                    </div>
+                </div>
+            </div>
+            <!-- -----------Mother--------------- -->
+            <div class="border-t-4 border-slate-500 pb-6 m-1">
+                <h1 class="text-2xl mt-4 underline font-medium decoration-3">Mother Details</h1>
+                <div class="grid grid-cols-3 gap-4 mt-2" formGroupName="Mother">
+                    <div>
+                        <label for="fName" class="text-xl">First Name</label>
+                        <input type="text" id="fName" placeholder="Enter First Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1"
+                            formControlName="MotherFirstName">
+                        <span *ngIf="mother_FirstName?.invalid  && mother_FirstName?.touched">
+                            <span *ngIf="mother_FirstName?.errors?.['required']" class="text-red-600 text-lg">
+                                * First Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="mName" class="text-xl">Middle Name</label>
+                        <input type="text" id="fName" placeholder="Enter Middle Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="MotherMiddleName">
+                        <span *ngIf="mother_MiddleName?.invalid  && mother_MiddleName?.touched">
+                            <span *ngIf="mother_MiddleName?.errors?.['required']" class="text-red-600 text-lg">
+                                * Middle Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="lName" class="text-xl">Last Name</label>
+                        <input type="text" id="lName" placeholder="Enter Last Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="MotherLastName">
+                        <span *ngIf="mother_LastName?.invalid  && mother_LastName?.touched">
+                            <span *ngIf="mother_LastName?.errors?.['required']" class="text-red-600 text-lg">
+                                * Last Name is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="email" class="text-xl">Email</label>
+                        <input type="text" id="email" placeholder="Enter Email"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1" formControlName="MotherEmail">
+                        <span class="text-red-600 text-lg"
+                            *ngIf="mother_Email?.hasError('required') && (mother_Email?.dirty || mother_Email?.touched)">Email
+                            field is required !</span>
+                        <span class="text-red-600 text-lg"
+                            *ngIf="mother_Email?.hasError('pattern') && (mother_Email?.dirty || mother_Email?.touched)">Please
+                            enter valid Email Address</span>
+                    </div>
+                    <div>
+                        <label for="education" class="text-xl">Education Qualification</label>
+                        <input type="text" id="education" placeholder="Enter Education Details"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="MotherEducation">
+                        <span *ngIf="mother_Education?.invalid  && mother_Education?.touched">
+                            <span *ngIf="mother_Education?.errors?.['required']" class="text-red-600 text-lg">
+                                * Education Qualification is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="proffession" class="text-xl">Profession </label>
+                        <input type="text" id="proffession" placeholder="Enter Profession"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1"
+                            formControlName="MotherProfession">
+                        <span *ngIf="mother_Profession?.invalid  && mother_Profession?.touched">
+                            <span *ngIf="mother_Profession?.errors?.['required']" class="text-red-600 text-lg">
+                                * Profession is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="designation" class="text-xl">Designation </label>
+                        <input type="text" id="designation" placeholder="Enter Designation"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="MotherDesignation">
+                        <span *ngIf="mother_Designation?.invalid  && mother_Designation?.touched">
+                            <span *ngIf="mother_Designation?.errors?.['required']" class="text-red-600 text-lg">
+                                * Designation is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="phone" class="text-xl">Phone Number</label>
+                        <input type="text" id="phone" placeholder="Enter Phone Number"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1" formControlName="MotherPhone">
+                        <span class="text-red-600 text-lg"
+                            *ngIf="mother_Phone?.hasError('required') && (mother_Phone?.dirty || mother_Phone?.touched)">Phone
+                            field is required !</span>
+                        <span class="text-red-600 text-lg"
+                            *ngIf="mother_Phone?.hasError('pattern') && (mother_Phone?.dirty || mother_Phone?.touched)">Please
+                            enter valid Phone Number</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------- -->
+            <div class="border-t-4 border-slate-500 pb-6 m-1">
+                <h1 class="text-2xl mt-4 underline font-medium decoration-3">Emergency Details</h1>
+                <div class="grid grid-cols-2 gap-4 mt-2" formGroupName="Emergency">
+                    <div>
+                        <label for="rContact" class="text-xl">Relation Contact</label>
+                        <input type="text" id="rContact" placeholder="Enter Relation Contact Number"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1"
+                            formControlName="RelationContact">
+                        <span class="text-red-600 text-lg"
+                            *ngIf="Relation_Contact?.hasError('required') && (Relation_Contact?.dirty || Relation_Contact?.touched)">Relation
+                            Contact
+                            field is required !</span>
+                        <span class="text-red-600 text-lg"
+                            *ngIf="Relation_Contact?.hasError('pattern') && (Relation_Contact?.dirty || Relation_Contact?.touched)">Please
+                            enter valid Phone Number</span>
+
+                    </div>
+                    <div>
+                        <label for="realation" class="text-xl">Relation Name</label>
+                        <input type="text" id="realation" placeholder="Enter Relation Name"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="RelationName">
+                        <span *ngIf="Relation_Name?.invalid  && Relation_Name?.touched">
+                            <span *ngIf="Relation_Name?.errors?.['required']" class="text-red-600 text-lg">
+                                * Relation is Required !
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <h1 class="text-2xl mt-4 underline font-medium decoration-3">Reference Details</h1>
+                <div class="grid grid-cols-2 gap-4 mt-2" formGroupName="Reference">
+                    <div>
+                        <label for="Address" class="text-xl">Address</label>
+                        <input type="text" id="Address" placeholder="Enter Address"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1 mt-1"
+                            formControlName="ReferenceAddress">
+                        <span *ngIf="Reference_Details?.invalid  && Reference_Details?.touched">
+                            <span *ngIf="Reference_Details?.errors?.['required']" class="text-red-600 text-lg">
+                                * Address is Required !
+                            </span>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="TelePhone" class="text-xl">TelePhone Number</label>
+                        <input type="text" id="TelePhone" placeholder="Enter TelePhone Number"
+                            class="border-2 border-stone-400 w-full rounded-lg p-1  mt-1"
+                            formControlName="ReferenceNumber">
+                        <span class="text-red-600 text-lg"
+                            *ngIf="Reference_Phone?.hasError('required') && (Reference_Phone?.dirty || Reference_Phone?.touched)">TelePhone
+                            Number
+                            field is required !</span>
+                        <span class="text-red-600 text-lg"
+                            *ngIf="Reference_Phone?.hasError('pattern') && (Reference_Phone?.dirty || Reference_Phone?.touched)">Please
+                            enter valid Phone Number</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-2">
+                <button class="px-12 py-2  shadow-lg shadow-indigo-500/40 bg-indigo-400 rounded-lg">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="overflow-auto">
+        <table class="table-auto border border-1 border-black snap-x snap-mandatory ">
+            <tr class="border border-1 border-black snap-center uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <td class="border border-1 border-black px-2 text-lg">FirstName</td>
+                <td class="border border-1 border-black px-2 text-lg">MiddleName</td>
+                <td class="border border-1 border-black px-2 text-lg">LastName</td>
+                <td class="border border-1 border-black px-2 text-lg">PlaceOfBirth</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherLang</td>
+                <td class="border border-1 border-black px-2 text-lg">City</td>
+                <td class="border border-1 border-black px-2 text-lg">State</td>
+                <td class="border border-1 border-black px-2 text-lg">Country</td>
+                <td class="border border-1 border-black px-2 text-lg">Pincode</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherFirstName</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherMiddleName</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherLastName</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherEmail</td>
+                <td class="border border-1 border-black px-2 text-lg">EducationQualification</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherProfession</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherDesignation</td>
+                <td class="border border-1 border-black px-2 text-lg">FatherPhone</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherFirstName</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherMiddleName</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherLastName</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherEmail</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherEducation</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherProfession</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherDesignation</td>
+                <td class="border border-1 border-black px-2 text-lg">MotherPhone</td>
+                <td class="border border-1 border-black px-2 text-lg">RelationContact</td>
+                <td class="border border-1 border-black px-2 text-lg">RelationName</td>
+                <td class="border border-1 border-black px-2 text-lg">ReferenceAddress</td>
+                <td class="border border-1 border-black px-2 text-lg">ReferenceNumber</td>
+            </tr>
+            <tr *ngFor="let data of StudentData">
+                <td class="border border-1 border-black px-2 text-md">{{data.Name.FirstName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Name.MiddleName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Name.LastName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Name.PlaceOfBirth}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Name.MotherLang}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Address.City}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Address.State}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Address.Country}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Address.Pincode}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherFirstName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherMiddleName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherLastName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherEmail}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.EducationQualification}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherProfession}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherDesignation}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Father.FatherPhone}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherFirstName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherMiddleName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherLastName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherEmail}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherEducation}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherProfession}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherDesignation}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Mother.MotherPhone}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Emergency.RelationContact}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Emergency.RelationName}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Reference.ReferenceAddress}}</td>
+                <td class="border border-1 border-black px-2 text-md">{{data.Reference.ReferenceNumber}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
