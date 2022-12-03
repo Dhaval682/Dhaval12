@@ -1,4 +1,7 @@
-{
+{   "Angular":{
+    "title":"Angular_Practice",
+    "link":"https://stackblitz.com/edit/angular-ivy-vn8p2k?file=src%2Fapp%2Fheroes%2Fheroes.component.html,src%2Fapp%2Fherodetails%2Fherodetails.component.ts,src%2Fapp%2Fapp.component.html,src%2Fapp%2Fherodetails%2Fherodetails.component.html,src%2Fapp%2Fheroes%2Fheroes.component.ts"
+    },
     "title":"React_Routing",
     "Link":"https://stackblitz.com/edit/react-lzzwcc?file=src%2Findex.js,src%2FApp.js,src%2Froutes%2Finvoices.js,src%2Froutes%2Fexpenses.js,src%2Froutes%2FchildInvoice.js,src%2Froutes%2Finvoice.js"
 }
