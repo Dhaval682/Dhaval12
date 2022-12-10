@@ -1,0 +1,40 @@
+<hello name="{{ name }}"></hello>
+<input type="text" [(ngModel)]="show" />
+<input type="text" />
+{{ show }}
+<p *ngIf="showInfo; else elseblock">
+  Start editing to see some magic happen :)
+</p>
+<ng-template #elseblock>
+  <h1>Value is false</h1>
+</ng-template>
+
+<ul *ngFor="let i of array">
+  <li *ngIf="i.ID > 60; else redblock" style="color:green">
+    {{ i.ID }}
+  </li>
+  <ng-template #redblock>
+    <li style="color:red">{{ i.ID }}</li>
+  </ng-template>
+
+  <ng-template #blueblock>
+    <li *ngIf="i.ID >= 40" style="color:red">{{ i.ID }}</li>
+  </ng-template>
+</ul>
+____________________________________
+<ul>
+  <ng-container *ngFor="let i of array" [ngSwitch]="i.Rating">
+    <li [ngStyle]="{ 'font-size': '18px', color: 'green' }">
+      <ng-container *ngSwitchCase="'1'">
+        {{ i.ID }} - {{ i.Rating }}
+      </ng-container>
+    </li>
+          
+    <li *ngSwitchCase="'2'" [ngStyle]="{ 'font-size': '18px', color: 'blue' }">
+      {{ i.ID }} - {{ i.Rating }}
+    </li>
+    <li *ngSwitchCase="'3'" [ngStyle]="{ 'font-size': '18px', color: 'red' }">
+      {{ i.ID }} - {{ i.Rating }}
+    </li>
+  </ng-container>
+</ul>

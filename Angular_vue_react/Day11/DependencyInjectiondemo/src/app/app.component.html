@@ -1,0 +1,10 @@
+<div [formGroup]="calcform">
+  Number 1: <input type="number" formControlName="num1"/>
+  Number 2: <input type="number" formControlName="num2"/>
+  {{this.calcform.value.num3}}
+
+  <div *ngFor="let item of list">
+    {{item.num1 }}+{{item.num2}} ={{item.num3}}
+  </div>
+  <button (click)="submitinfo()">Add</button>
+</div>

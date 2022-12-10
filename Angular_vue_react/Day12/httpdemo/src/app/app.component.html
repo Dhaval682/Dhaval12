@@ -1,0 +1,22 @@
+<div [formGroup]="userForm">
+  <input type="hidden" formControlName="id"/>
+  Name: <input type="text" formControlName="name"/>
+  Email: <input type="text" formControlName="email"/>
+  Male <input type="radio" value="male" formControlName="gender"/>
+Female <input type="radio" value="female" formControlName="gender"/>
+<select formControlName="status">
+<option value="active">active</option>
+<option value="inactive">inactive</option>
+</select>
+{{userForm.value|json}}
+<button (click)="submitinfo()" >SubmitUser</button>
+<button (click)="editinfo()">Edit</button>
+</div>
+<div *ngFor="let i of userList">
+  {{i.id}} {{i.name}} {{i.gender}} {{i.status}}
+<button (click)="editnfo(i)">Edit</button>
+</div>
+<input type="text" [(ngModel)]="num1"/>
+{{num1}}
+
+

@@ -1,0 +1,14 @@
+<!-- <h1>Hello World</h1>
+<h1>{{greeting}}</h1>
+<h2>{{title}}</h2>
+<input type="text" [(ngModel)]="title" [ngClass]="blue" [ngStyle]="red" [style.background-color]="color" />
+<input type="text" [value]="title"/>
+<div>
+  <app-helloworld></app-helloworld>
+</div> -->
+Enter Author First Name <input type="text" [(ngModel)]="firstname"/>
+
+Enter Author LAst Name <input type="text" [(ngModel)]="lastname"/>
+<button (click)="saveme()" >Save me</button>
+<app-author-list [AuthorInfo]=authorList ></app-author-list>
+

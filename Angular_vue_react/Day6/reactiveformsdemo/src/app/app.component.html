@@ -1,0 +1,34 @@
+<form [formGroup]="profileform">
+    <div formGroupName="Name">
+        FirstName <input type="text" formControlName="FirstName"/>
+
+        <div  *ngIf="FName?.invalid  && FName?.touched">
+          hello
+            <div *ngIf="FName?.errors?.['required']">
+                "Value Can not be empty"
+            </div>
+            <div *ngIf="FName?.errors?.['minlength']">
+             Minimum character required is 3
+          </div>
+        </div>
+        LastName <input type="text" formControlName="LastName"/>
+    </div>
+    <div formGroupName="Address">
+      CurrentAddress<input type="text" formControlName="CurrentAddress"/>
+      PermanentAddress <input type="text" formControlName="PermanentAddress"/>
+
+    </div>
+    <div formGroupName="Gender">
+        Male <input type="Radio" value="Male"  formControlName="detail"/>
+        Female <input type="Radio" value="Female" formControlName="detail"/>
+    </div>
+    <div>
+      <select formControlName="City" >
+        <ng-container *ngFor="let city of cities">
+          <option [value]="city.CityID">{{city.CityName}}</option>
+        </ng-container>
+      </select>
+    </div>
+    {{profileform.value|json}}
+    <button [disabled]="!profileform.valid" (click)="submitdata()"> Submit Data</button>
+</form>

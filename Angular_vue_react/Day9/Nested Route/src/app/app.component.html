@@ -1,0 +1,14 @@
+<div>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/about">About</a>
+</div>
+<ul *ngFor="let item of list">
+<!-- <li><a [routerLink]="['/detail', item.ProduchrotID]" [queryParams]="{name: item.Name}">{{item.Name}}</a></li> -->
+<li><button (click)="details(item)">{{item.Name}}</button></li>
+</ul>
+<div>
+  <div><a routerLink="hrs">HR</a>
+  <a routerLink="accounts">Accounts</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>
