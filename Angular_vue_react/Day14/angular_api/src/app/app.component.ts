@@ -23,5 +23,5 @@ export class AppComponent implements OnInit {
     
   }
 
-
+// filters=https://www.freakyjolly.com/angular-typescript-create-filter-list-with-check-boxes-to-select-from-list/
 }
