@@ -24,4 +24,6 @@ export class AppComponent implements OnInit {
   }
 
 // filters=https://www.freakyjolly.com/angular-typescript-create-filter-list-with-check-boxes-to-select-from-list/
+// Scaffold-DbContext "Server=PC0763\MSSQL2019;Database=Hospital;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+// Scaffold-DbContext "Server=PC0763\MSSQL2019;Database=Manufacture;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 }
