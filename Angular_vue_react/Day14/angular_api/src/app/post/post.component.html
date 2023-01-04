@@ -1,0 +1,16 @@
+<div class="col-12 p-2 d-flex justify-center flex-wrap">
+    <div class="card m-2 shadow-sm p-3 mb-5 bg-body rounded d-flex flex-column justify-between flex-wrap" style="width:28rem">
+    <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="..." class="card-img-top p-3 border-bottom" style="height:18rem !important">
+    <div class="card-body d-flex flex-column justify-between">
+      <h1 class="font-bold fs-5 my-2"  >User Id :{{user.id | json}}</h1>
+      <h1 class="font-bold fs-5 my-2"  >User Name : {{user.name |json}} </h1>
+      <h1 class="font-bold fs-5 my-2"  >Title : {{post.title}} </h1>
+      <h1 class="font-bold fs-5 my-2"  >Body : {{post.body}} </h1>
+     comments: <input type="text" [(ngModel)]="comments"><br>
+     <h4>Comments:</h4>
+     <h1 class="font-bold fs-5 my-2"  >@Name : {{commentdata.name}} </h1>
+      <h1 class="font-bold fs-5 my-2"  >Comments : {{commentdata.body}} </h1>
+      <button class="btn btn-primary d-block p-2 text-white font-bold" (click)="postComments(post)">comments</button>
+    </div>
+   </div>
+ </div>

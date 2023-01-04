@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "routingdemo": {
+    "angular_api": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/routingdemo",
+            "outputPath": "dist/angular_api",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "routingdemo:build:production"
+              "browserTarget": "angular_api:build:production"
             },
             "development": {
-              "browserTarget": "routingdemo:build:development"
+              "browserTarget": "angular_api:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "routingdemo:build"
+            "browserTarget": "angular_api:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "323ceb2b-0a0d-4ed9-80ae-d6c8b899d5f9"
+    "analytics": "08f940b8-bcad-4ac4-9a18-0b5656489ffb"
   }
 }

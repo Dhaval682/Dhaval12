@@ -12,7 +12,9 @@ export class AppComponent {
 
   }
   list:any=[{ProductID:1,Name:"Keyboard"},{ProductID:2,Name:"Mouse"}]
-  
+ // DbContext:::
+  // Scaffold-DbContext "Server=PC0763\MSSQL2019;Database=Hospital;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+  // Scaffold-DbContext "Server=PC0763\MSSQL2019;Database=Manufacture;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
   details(item:any)
   {
     // this.router.navigate(["/detail", item.ProductID], {

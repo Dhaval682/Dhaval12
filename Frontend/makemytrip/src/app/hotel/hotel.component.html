@@ -1,0 +1,179 @@
+<div class="container mx-auto -mt-10">
+  <div class="p-4 text-center bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-between mt-5">
+      <div class="flex">
+        <div>
+          <input type="radio" id="oneway" value="ONEWAY" name="flights">
+          <label class="px-1" for="oneway">UPTO 5 ROOMS</label>
+        </div>
+        <div class="ml-2">
+          <input type="radio" id="roundTrip" value="ROUND TRIP" name="flights">
+          <label class="px-1" for="roundTrip">5 + ROOMS</label>
+        </div>
+      </div>
+      <div class="justify-self-end">
+        Book International and Domestic Flights
+      </div>
+    </div>
+    <div class="grid grid-cols-8  text-center bg-white border rounded-lg  dark:bg-gray-800 dark:border-gray-700 mt-2">
+      <div class="col-span-2 justify-self-center px-2">
+        <div>
+          CITY, PROPERTY NAME OR LOCATION
+        </div>
+
+       <div>
+        <button (click)="toggleForCityList()" id="dropdownSearchButton"  
+        class="text-black text-2xl text-center w-72  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+        type="button"  >{{value}} </button>
+       </div>
+
+        <!-- Dropdown menu -->
+        <ng-container *ngIf="city">
+          <div id="dropdownSearch" class="z-50 w-60 absolute bg-white rounded shadow dark:bg-gray-700 ">
+            <div class="p-3">
+              <label for="input-group-search" class="sr-only">Search</label>
+              <div class="relative">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <input type="text" id="input-group-search" [(ngModel)]="searchText"
+                  class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Enter City/Hotel/state">
+              </div>
+            </div>
+            <ul class="overflow-y-auto px-3 pb-3 h-48 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownSearchButton">
+              <li>
+                <div *ngFor="let a of cityList | filter:searchText"
+                  class="flex  justify-between  rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+  
+                  <label (click)="selectValue(a)" for="checkbox-item-11"
+                    class="py-2 ml-2 w-full justify-self-start text-sm font-medium text-gray-900 rounded dark:text-gray-300">
+                    {{a.cityName}}</label>
+                  <label for="city" class="py-2 ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">
+                    City</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </ng-container>
+
+      </div>
+      <div class="border-l dark:border-gray-700">
+        CHECK-IN <span class="text-blue-500 "><i class="fa-solid fa-angle-down fa-lg"></i></span>
+        <input type="date" id="date_picker" [(ngModel)]="checkinDate" class="border-0 focus:border-none  outline-none" placeholder="Check In"  >
+      </div>
+      <div class="border-l">
+        CHECK-OUT <span class="text-blue-500 "><i class="fa-solid fa-angle-down fa-lg"></i></span>
+        <input type="date" id="date_picker1" [(ngModel)]="checkoutDate" class="border-0 focus:border-none  outline-none" placeholder="Check In">
+      </div>
+      <div class="border-x col-span-2 ">
+        <button (click)="toggle()"> ROOMS & GUESTS</button> <span class="text-blue-500"><i
+            class="fa-solid fa-angle-down fa-lg"></i></span>
+        <p class="font-bold text-lg">{{rooms}}Rooms {{adult}}Adult {{child}}Child..</p>
+        <ng-container *ngIf="show">
+          <div id="drop" class="w-96 bg-gray-50 drop-shadow-md absolute py-4 rounded-md right top-72 z-10">
+            <div class="px-12">
+              <div class="flex  justify-between items-center  ">
+                <div>
+                  <p class="font-bold text-sm">Rooms</p>
+                </div>
+                <div class="w-14 relative ">
+                  <div class="h-8 w-24 flex  relative ">
+                    <select [(ngModel)]="roomsSet"
+                      class="w-3/5 max-h-40 px-2 border-none  shadow-md shadow-gray-500 rounded-md overflow-y-auto absolute left-0 top-0 z-index-20 bg-white">
+                      <option class="text-sm  px-4" value="1">1</option>
+                      <option class="text-sm  px-4" value="2">2</option>
+                      <option class="text-sm  px-4" value="3">3</option>
+                      <option class="text-sm  px-4" value="4">4</option>
+                      <option class="text-sm  px-4" value="5">5</option>
+                      <option class="text-sm  px-4" value="6">6</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="flex  justify-between items-center ">
+                <div>
+                  <p class="font-bold text-start text-sm">Adult</p>
+                </div>
+                <div class="w-14 relative ">
+                  <div class="h-8 w-24 flex items-center relative">
+                    <select [(ngModel)]="adultSet"
+                      class="w-3/5 max-h-40 px-2 border-none  shadow-md shadow-gray-500 rounded-md overflow-y-auto absolute left-0 top-0 z-index-20 bg-white">
+                      <option class="text-sm  px-4" value="1">1</option>
+                      <option class="text-sm  px-4" value="2">2</option>
+                      <option class="text-sm  px-4" value="3">3</option>
+                      <option class="text-sm  px-4" value="4">4</option>
+                      <option class="text-sm  px-4" value="5">5</option>
+                      <option class="text-sm  px-4" value="6">6</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="flex  justify-between items-center ">
+                <div>
+                  <p class="font-bold text-sm">Children</p>
+                </div>
+                <div class="w-14 relative ">
+                  <div class="h-8 w-24 flex items-center relative">
+                    <select [(ngModel)]="childSet"
+                      class="w-3/5 max-h-40 px-2 border-0  shadow-md shadow-gray-500 rounded-md overflow-y-auto  absolute left-0 top-0 z-index-20 bg-white">
+                      <option class="text-sm  px-4" value="0">0</option>
+                      <option class="text-sm  px-4" value="1">1</option>
+                      <option class="text-sm  px-4" value="2">2</option>
+                      <option class="text-sm  px-4" value="3">3</option>
+                      <option class="text-sm  px-4" value="4">4</option>
+                      <option class="text-sm  px-4" value="5">5</option>
+                      <option class="text-sm  px-4" value="6">6</option>
+
+                    </select>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-2 px-2 flex rounded-md drop-shadow-xl  ">
+              <button
+                class="ml-auto shadow-lg shadow-indigo-500/50 bg-gradient-to-r from-cyan-500 rounded-lg to-blue-500 inline-block uppercase py-2 px-8"
+                (click)="guestRoom()">Apply</button>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div>
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> PRICE PER
+          NIGHT<span class="text-blue-500 ml-2"><i class="fa-solid fa-angle-down fa-lg"></i></span></label>
+
+        <button (click)="toggleForPriceList()" id="dropdownDefault" data-dropdown-toggle="dropdown"
+          class="text-black  font-medium rounded-lg text-xl px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button">{{price}} </button>
+        <!-- Dropdown menu -->
+        <ng-container *ngIf="togglePrice">
+          <div id="dropdown" class="z-10 w-44 absolute bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+            <ul *ngFor="let a of priceList" class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+              <li>
+                <a (click)="priceTake(a)" 
+                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">&#8377; {{a}}</a>
+              </li>
+            </ul>
+          </div>
+        </ng-container>
+
+      </div>
+    </div>
+  </div>
+  <div   class="flex flex-col justify-center items-center">
+    <button (click)="navigate()" class="px-12 py-2 -mt-6  rounded-full bg-gradient-to-r from-cyan-500 to-blue-500" >Search</button>
+  </div>
+</div>
+<div>
+
+</div>
+ 

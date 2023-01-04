@@ -1,0 +1,5 @@
+{
+    "Authenticate":"https://stackblitz.com/edit/angular-ivy-fxzeme?file=src%2Fapp%2FAuth.ts,src%2Fapp%2Flogin%2Flogin.component.ts,src%2Fapp%2Fauth.service.ts,src%2Fapp%2Fhome%2Fhome.component.ts,src%2Fapp%2Fuser.service.ts,src%2Fapp%2Fuser.ts",
+   
+    "Login": "https://stackblitz.com/edit/angular-ivy-aj4fnu?file=src%2Fapp%2Fapp-routing.module.ts,src%2Fapp%2Fapp.component.css,src%2Fapp%2Fapp.component.html,src%2Fapp%2Fauth.service.ts,src%2Fapp%2Flogin%2Flogin.component.ts,src%2Fapp%2Fhome%2Fhome.component.ts,src%2Fapp%2Fhome%2Fhome.component.html"
+}

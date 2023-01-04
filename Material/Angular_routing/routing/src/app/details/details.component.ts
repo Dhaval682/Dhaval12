@@ -13,11 +13,11 @@ export class DetailsComponent implements OnInit {
   
     ngOnInit(): void {
       this.route.paramMap.subscribe(params => {
-     console.log(params.get('id'));
-    var id:any=params.get('id');
-    var data= this.details.find((p:any)=>p.ProductID==id)
-    this.color=data.color;
-  this.image=data.image;
+      console.log(params.get('id'));
+      var id:any=params.get('id');
+      var data= this.details.find((p:any)=>p.ProductID==id)
+      this.color=data.color;
+      this.image=data.image;
       });
   
       // this.route.queryParamMap.subscribe(params=>{
